@@ -38,7 +38,7 @@ namespace HeapsDsa
             item[fist] = item[second];
             item[second] = temp;
         }
-        public int Remove()
+        public void Remove()
         {
             if(ISEMPTY())
             {
@@ -121,20 +121,13 @@ namespace HeapsDsa
         static void Main(string[] args)
         {
             Heaps heaps = new Heaps();
-            int[] array = { 5,10,3,1,4,2 };
-            foreach(int i in array)
-            {
-                heaps.insert(i);
-            }
-            for(int count=0;count<array.Length;count++)
-            {
-                array[count] = heaps.Remove();
-            }
-            foreach(int i in array)
-            {
-                Console.WriteLine(i);
-            }
-            
+            heaps.insert(10);
+            heaps.insert(5);
+            heaps.insert(17);
+            heaps.insert(4);
+            heaps.insert(22);
+            heaps.insert(10);
+            heaps.Remove();
         }
     }
 }
